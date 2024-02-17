@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-Chat</title>
+    <link rel="stylesheet" href="../static/sass/register.min.css">
+</head>
+<body>
+<section>
+
+    <div class="box">
+        <div class="box__item">
+            <form class="register" action="{{ url_for('register') }}" method="post" enctype="multipart/form-data">
+                <div class="register__name">
+                    <h1>Register</h1>
+                </div>
+                <div class="register__input">
+                    <div class="form-control">
+                        <input name="name" type="value" required="">
+                        <label>
+                            <span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">a</span><span
+                                style="transition-delay:100ms">m</span><span
+                                style="transition-delay:150ms">e</span><span style="transition-delay:200ms"></span><span
+                                style="transition-delay:250ms"></span><span style="transition-delay:300ms"></span><span
+                                style="transition-delay:350ms"></span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input name="user_name" type="value" required="">
+                        <label>
+                            <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span
+                                style="transition-delay:100ms">e</span><span
+                                style="transition-delay:150ms">r</span><span
+                                style="transition-delay:200ms">n</span><span
+                                style="transition-delay:250ms">a</span><span
+                                style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input name="gmail" type="email" required="">
+                        <label>
+                            <span style="transition-delay:0ms">G</span><span style="transition-delay:50ms">m</span><span
+                                style="transition-delay:100ms">a</span><span
+                                style="transition-delay:150ms">i</span><span
+                                style="transition-delay:200ms">l</span><span style="transition-delay:250ms"></span><span
+                                style="transition-delay:300ms"></span><span style="transition-delay:350ms"></span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input name="password" type="password" required="">
+                        <label>
+                            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span
+                                style="transition-delay:100ms">s</span><span
+                                style="transition-delay:150ms">s</span><span
+                                style="transition-delay:200ms">w</span><span
+                                style="transition-delay:250ms">o</span><span
+                                style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                        </label>
+                    </div>
+                    <div class="register__img-input">
+                        <div class="file">
+                            Upload Image
+                        </div>
+                        <input hidden type="file" name="img" id="image-input" class="img_input"
+                               accept="image/jpeg, image/png, image/jpg">
+                        <div id="image-container"></div>
+
+                    </div>
+                    <button class="button" alt="Register">
+                        <i>R</i>
+                        <i>e</i>
+                        <i>g</i>
+                        <i>i</i>
+                        <i>s</i>
+                        <i>t</i>
+                        <i>e</i>
+                        <i>r</i>
+                    </button>
+                </div>
+                <div class="register__text">
+                    <h6>If you have an account:</h6>
+                    <a id="login__button" href="#">Login</a>
+                </div>
+            </form>
+            <form class="login" action="{{ url_for('login') }}" method="post" enctype="multipart/form-data">
+                <div class="login__name">
+                    <h1>Login</h1>
+                </div>
+                <div class="login__input">
+                    <div class="form-control">
+                        <input name="user_name" type="value" required="">
+                        <label>
+                            <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span
+                                style="transition-delay:100ms">e</span><span
+                                style="transition-delay:150ms">r</span><span
+                                style="transition-delay:200ms">n </span><span
+                                style="transition-delay:250ms">a</span><span
+                                style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+                            <span style="transition-delay:400ms"></span><span
+                                style="transition-delay:450ms">o</span><span
+                                style="transition-delay:500ms">r</span><span style="transition-delay:550ms"></span>
+                            <span style="transition-delay:600ms">E</span><span
+                                style="transition-delay:650ms">m</span><span
+                                style="transition-delay:700ms">a</span><span
+                                style="transition-delay:750ms">i</span><span style="transition-delay:800ms">l</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input name="password" type="password" required="">
+                        <label>
+                            <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span
+                                style="transition-delay:100ms">s</span><span
+                                style="transition-delay:150ms">s</span><span
+                                style="transition-delay:200ms">w</span><span
+                                style="transition-delay:250ms">o</span><span
+                                style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+                        </label>
+                    </div>
+                    <button class="button" alt="Login">
+                        <i>L</i>
+                        <i>o</i>
+                        <i>g</i>
+                        <i>i</i>
+                        <i>n</i>
+                    </button>
+                </div>
+                <div class="login__text">
+                    <h6>If you don't have an account: </h6>
+                    <a id="register__button" href="#">Register</a>
+                </div>
+            </form>
+        </div>
+        <div class="circle">
+            <h1>Welcome to V-Chat</h1>
+            <h4>You won't regret your time here</h4>
+        </div>
+
+</section>
+
+<script src="../static/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,1550 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: Inter
+
+body
+  display: flex
+
+
+header
+  width: 30vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  background: #96FFD9
+  border-right: 2px solid #03CDDE
+  border-radius: 0 15px 15px 0
+  position: relative
+
+  .video__active
+    width: 400px
+    height: 300px
+    display: none
+    flex-direction: column
+    position: absolute
+    background: #03CDDE
+    border: 1px solid #0A949F
+    border-radius: 15px
+    align-items: center
+    justify-content: center
+    top: 70px
+    right: -300px
+    z-index: 20
+
+    .video__active__text
+      width: 100%
+      height: 15%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 18px
+
+    .video__active__input
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: center
+      justify-content: center
+
+    .video__active__box
+      width: 90%
+      height: 55%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .video__active__box__button
+        width: 50%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+
+      .video__active__box__img
+        width: 50%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+  .photo__active
+    width: 400px
+    height: 300px
+    display: none
+    flex-direction: column
+    position: absolute
+    background: #03CDDE
+    border: 1px solid #0A949F
+    border-radius: 15px
+    align-items: center
+    justify-content: center
+    top: 70px
+    right: -300px
+    z-index: 20
+
+    .photo__active__text
+      width: 100%
+      height: 15%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 18px
+
+    .photo__active__input
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: center
+      justify-content: center
+
+    .photo__active__box
+      width: 90%
+      height: 55%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .photo__active__box__button
+        width: 50%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+
+      .photo__active__box__img
+        width: 50%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+          width: 142px
+          height: 142px
+          object-fit: cover
+          border: 1px solid #0a949f
+          border-radius: 5px
+
+
+  .massage__section
+    width: 100%
+    height: 100%
+    margin-top: 20px
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+    .user
+      width: 460px
+      height: 80px
+      margin-bottom: 8px
+      display: flex
+      align-items: center
+      justify-content: space-around
+      background: #03CDDE
+      border: 1px solid #0A949F
+      border-radius: 10px
+      color: #F2F2F2
+
+      .user_img
+        width: 20%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+          width: 65px
+          height: 65px
+          border-radius: 100%
+          object-fit: cover
+          border: 1px solid #0a949f
+
+      .user_box
+        width: 52%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+
+        .user_box_username
+          width: auto
+          height: 50%
+          display: flex
+          align-items: flex-end
+
+        .user_box_name
+          width: auto
+          height: 50%
+          display: flex
+          align-items: flex-start
+          padding-left: 2px
+
+      .user_img_score
+        width: 28%
+        height: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: space-around
+
+        p
+          margin-bottom: 7.5px
+
+  .v-chat__section
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+
+  .video__section
+    width: 100%
+    height: 100%
+    display: none
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    color: #F2F2F2
+
+    .creat__video
+      width: 331px
+      height: 90px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border: 1px solid #0A949F
+      border-left: none
+      border-radius: 0 8px 8px 0
+      margin-top: 20px
+
+      .creat__video__text
+        width: 80%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+
+      .creat__video__icon
+        width: 20%
+        height: 55%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 40px
+        border-left: 2px solid #0A949F
+
+    .creat__photo
+      width: 331px
+      height: 90px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border: 1px solid #0A949F
+      border-left: none
+      border-radius: 0 8px 8px 0
+      margin-top: 7px
+
+      .creat__photo__text
+        width: 80%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+
+      .creat__photo__icon
+        width: 20%
+        height: 55%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 40px
+        border-left: 2px solid #0A949F
+
+    .creat__music
+      width: 331px
+      height: 90px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border: 1px solid #0A949F
+      border-left: none
+      border-radius: 0 8px 8px 0
+      margin-top: 7px
+
+      .creat__music__text
+        width: 80%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+
+      .creat__music__icon
+        width: 20%
+        height: 55%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 40px
+        border-left: 2px solid #0A949F
+
+    .creat__product
+      width: 331px
+      height: 90px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border: 1px solid #0A949F
+      border-left: none
+      border-radius: 0 8px 8px 0
+      margin-top: 7px
+
+      .creat__product__text
+        width: 80%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+
+      .creat__product__icon
+        width: 20%
+        height: 55%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 40px
+        border-left: 2px solid #0A949F
+
+
+  .header
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    .v-chat_icon
+      width: 120px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border-radius: 0 0 5px 0
+      border-right: 1px solid #0A949F
+      border-bottom: 1px solid #0A949F
+      font-size: 13px
+      color: #96FFD9
+
+    .massage_icon
+      width: 70px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border-radius: 0 0 5px 5px
+      border: 1px solid #0A949F
+      border-top: none
+      margin-left: 10px
+      font-size: 30px
+      color: #96FFD9
+
+    .profile_icon
+      width: 70px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border-radius: 0 0 5px 5px
+      border: 1px solid #0A949F
+      border-top: none
+      margin-left: 10px
+      color: #96FFD9
+      font-size: 30px
+
+    .favorite_icon
+      width: 70px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border-radius: 0 0 5px 5px
+      border: 1px solid #0A949F
+      border-top: none
+      margin-left: 10px
+      color: #96FFD9
+      font-size: 30px
+
+    .video_icon
+      width: 70px
+      height: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #03CDDE
+      border-radius: 0 0 5px 5px
+      border: 1px solid #0A949F
+      border-top: none
+      margin-left: 10px
+      color: #96FFD9
+      font-size: 30px
+
+
+.active
+  border-bottom: none !important
+  border-radius: 0 !important
+  background: #96FFD9 !important
+  color: #03CDDE !important
+
+
+.file_section
+  width: 70vw
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: space-around
+  position: relative
+
+  .video
+    width: 40.6vw
+    height: 96vh
+    display: none
+    align-items: center
+    justify-content: flex-end
+    background: #100F0F
+    //border-right: 2px solid #03CDDE
+    border-radius: 15px
+    position: absolute
+    transform: translateX(-50%)
+    right: 11.5%
+    overflow: hidden
+
+    .video_header
+      width: 100%
+      height: 7%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      position: absolute
+      top: 0
+
+      .video_header_icon
+        width: 30%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #96FFD9
+        font-size: 25px
+        overflow: hidden
+        transition: 0.5s
+        position: relative
+
+        &:hover .video_header_icon_volume_line
+          display: flex !important
+
+        &:hover .video_header_icon_volume_text
+          display: flex !important
+
+        .video_header_icon_volume
+          width: 70%
+          min-width: 60px
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+
+
+          .video_header_icon_volume_line
+            width: 70%
+            height: 100%
+            display: none
+            align-items: center
+            justify-content: center
+
+          .video_header_icon_volume_text
+            width: 20%
+            height: 100%
+            display: none
+            align-items: center
+            justify-content: center
+            font-size: 20px
+
+
+    video
+      height: auto
+      max-height: 75vh
+      display: flex
+
+    .video_footer
+      width: 100%
+      height: 80px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      position: absolute
+      bottom: 0
+      border-radius: 0 0 15px 15px
+
+      .video_footer_box
+        width: 100%
+        height: 95%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .video_footer_box_icon
+          width: 10%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+          color: #96FFD9
+          font-size: 35px
+
+          .fa-solid:active
+            font-size: 34px
+
+        .video_footer_box_comment
+          width: 75%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+          position: relative
+
+          i
+            color: #96FFD9
+            font-size: 28px
+            position: absolute
+            left: 92%
+            top: 22.5%
+            transform: rotateX(-50%)
+            z-index: 150
+
+          i:active
+            font-size: 26px
+
+
+        .video_footer_box_heart
+          width: 8%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+
+
+      .video_footer_line
+        width: 100%
+        height: 5%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        z-index: 200
+
+        &:hover
+          height: 10%
+
+
+        &:hover .video_footer_box
+          height: 90%
+
+        .video_footer_line_item
+          width: 0
+          height: 100%
+          display: flex
+          background: #96FFD9
+          z-index: 100
+
+
+  .photo
+    width: 40.6vw
+    height: 96vh
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    background: #100F0F
+    //border-right: 2px solid #03CDDE
+    border-radius: 15px
+    position: absolute
+    transform: translateX(-50%)
+    right: 11.5%
+    overflow: hidden
+
+
+    img
+      height: auto
+      max-height: 75vh
+      display: flex
+      width: 100%
+      object-fit: cover
+
+    .video_footer
+      width: 100%
+      height: 80px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      position: absolute
+      bottom: 0
+      border-radius: 0 0 15px 15px
+
+      .video_footer_box
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .video_footer_box_icon
+          width: 10%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+          color: #96FFD9
+          font-size: 35px
+
+          .fa-solid:active
+            font-size: 34px
+
+        .video_footer_box_comment
+          width: 75%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+          position: relative
+
+          i
+            color: #96FFD9
+            font-size: 28px
+            position: absolute
+            left: 92%
+            top: 22.5%
+            transform: rotateX(-50%)
+            z-index: 150
+
+          i:active
+            font-size: 26px
+
+
+        .video_footer_box_heart
+          width: 8%
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-around
+
+
+  .comments
+    width: 27.5vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    background: #96FFD9
+    border-left: 2px solid #03CDDE
+    border-radius: 15px 0 0 15px
+    position: absolute
+    right: 0
+
+    .comment_header
+      width: 100%
+      height: 13.3%
+      background: #03CDDE
+      border-bottom: 1px solid #0A949F
+      border-radius: 15px 0 0 0
+      display: flex
+      align-items: center
+      justify-content: space-around
+
+      .comment_header_img
+        width: 23%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+          width: 85px
+          height: 85px
+          border-radius: 100%
+          border: 1px solid #03cdde
+
+      .comment_header_all
+        width: 76%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .comment_header_all_text
+          width: 100%
+          height: 70%
+          display: flex
+          align-items: flex-start
+          justify-content: flex-start
+          overflow: hidden
+          color: #F2F2F2
+          font-size: 18px
+
+        .comment_header_all_box
+          width: 100%
+          height: 30%
+          display: flex
+          align-items: center
+          justify-content: center
+          color: #F2F2F2
+
+          .comment_header_user
+            width: 60%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            font-size: 15px
+
+          .comment_header_score
+            width: 40%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: space-around
+
+
+    .comment_section
+      width: 100%
+      height: 86.7%
+      border-radius: 0 0 0 15px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: flex-start
+      overflow: auto
+
+      &::-webkit-scrollbar
+        width: 0
+
+      .comment
+        width: 430px
+        height: 150px
+        min-height: 150px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        background: #EAFCEF
+        border-radius: 10px 0 0 10px
+        margin-top: 7px
+        margin-bottom: 2px
+
+        .comment_header
+          width: 100%
+          min-height: 50px
+          display: flex
+          align-items: center
+          justify-content: space-around
+          background: #03CDDE
+          border-radius: 10px 0 0 0
+          color: #F2F2F2
+
+          .comment_header_img
+            width: 15%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+
+            img
+              width: 40px
+              height: 40px
+              object-fit: cover
+              border-radius: 100%
+              border: 1px solid #03CDDE
+
+          .comment_header_username
+            width: 55%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            font-size: 16px
+
+          .comment_header_score
+            width: 28%
+            height: 100%
+            display: flex
+            align-items: flex-end
+            justify-content: space-around
+
+            p
+              margin-bottom: 3.5px
+
+        .comment_section
+          width: 100%
+          height: auto
+          display: flex
+          justify-content: flex-start
+
+          .comment_section_text
+            width: 97%
+            font-size: 16px
+            display: flex
+            align-items: flex-start
+            justify-content: flex-start
+
+
+.video_list_section
+  width: 70vw
+  height: 100vh
+  position: relative
+  display: none
+  align-items: flex-start
+  justify-content: flex-start
+  overflow: auto
+  flex-wrap: wrap
+
+  &::-webkit-scrollbar
+    width: 0
+
+
+  .video
+    width: 250px
+    min-width: 250px
+    min-height: 350px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: black
+    margin: 10px 15px
+
+
+.photo_list_section
+  width: 70vw
+  height: 100vh
+  position: relative
+  display: none
+  align-items: flex-start
+  justify-content: flex-start
+  overflow: auto
+  flex-wrap: wrap
+
+  &::-webkit-scrollbar
+    width: 0
+
+
+  .photo
+    width: 250px
+    min-width: 250px
+    min-height: 350px
+    display: flex
+    align-items: center
+    justify-content: center
+    background: black
+    margin: 10px 15px
+
+    img
+      width: 100%
+      object-fit: cover
+
+.massage_section
+  width: 70vw
+  height: 100vh
+  position: relative
+  display: none
+  justify-content: flex-end
+
+
+  .box
+    width: 98%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    background: #96FFD9
+    border-left: 1px solid #03CDDE
+    border-radius: 15px 0 0 15px
+
+    header
+      width: 100%
+      height: 13.3%
+      background: #03CDDE
+      border-radius: 15px 0 0 0
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-around
+      color: #F2F2F2
+
+      .header_img
+        width: 10%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        img
+          width: 80px
+          height: 80px
+          border-radius: 100%
+
+      .header_box
+        width: 79%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .header_box_name
+          width: 100%
+          height: 50%
+          display: flex
+          align-items: flex-end
+          justify-content: flex-start
+
+        .header_box_full_name
+          width: 100%
+          height: 50%
+          display: flex
+          align-items: flex-start
+          justify-content: flex-start
+
+
+      .header_score
+        width: 11%
+        height: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: space-around
+
+        p
+          margin-bottom: 7px
+
+
+    section
+      width: 100%
+      height: 70.7%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      color: #F2F2F2
+      font-size: 20px
+      padding: 20px 0
+      position: relative
+
+      .massage
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        width: auto
+        height: auto
+        background-color: #03cdde
+        border-radius: 10px
+        padding: 8px 15px
+        margin: 3px 0
+        position: relative
+
+      .one
+        right: -950px
+
+      .two
+        left: 20px
+
+
+    footer
+      width: 100%
+      height: 16%
+      border-radius: 0 0 0 15px
+      display: flex
+      align-items: center
+      justify-content: space-around
+      color: #F2F2F2
+
+      .footer_input
+        width: 80%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+      .footer_box
+        width: 20%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+
+.containerInput
+  background-color: #96FFD9
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0 0 4px 0
+  z-index: 1
+  font-size: 15px
+  border-radius: 10px
+
+
+.containerInput::before
+  content: ''
+  width: 110%
+  aspect-ratio: 1
+  position: absolute
+  inset: 0 0 0 0
+  margin: auto
+  animation: rotate6234 2.5s ease-in-out infinite
+  z-index: -1
+  background-image: conic-gradient(from 0deg at 50% 50%, #073AFF00 0%, #03CDDE 25%, #073AFF00 25%)
+
+
+.containerInput > input
+  width: 330px
+  height: 70px
+  font-size: 18px
+  color: #fff
+  border: none
+  padding: 12px
+  background-color: #96FFD9
+  outline: 5px solid #96FFD9
+
+
+.containerInput > input:focus
+  outline: none
+
+
+.containerInput > input:not(:placeholder-shown)
+  outline: none
+
+
+.containerInput > input:not(:placeholder-shown):valid
+  outline: 4px solid rgb(0, 255, 183)
+
+
+@keyframes rotate6234
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
+
+
+.button__video
+  font-size: 18px
+  display: inline-block
+  outline: 0
+  border: 0
+  cursor: pointer
+  will-change: box-shadow, transform
+  background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%)
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%)
+  border-radius: 0.3em
+  color: #fff
+  height: 65px
+  width: 150px
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%)
+  transition: box-shadow 0.15s ease, transform 0.15s ease
+
+.button__video:hover
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0
+  transform: translateY(-0.1em)
+
+
+.button__video:active
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0
+  transform: translateY(0em)
+
+.rating
+  display: inline-block
+
+.rating input
+  display: none
+
+.rating label
+  float: right
+  cursor: pointer
+  color: #ccc
+  transition: color 0.3s
+
+
+.rating label:before
+  content: '\2605'
+  font-size: 23px
+
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label
+  color: #6f00ff
+  transition: color 0.3s
+
+
+.textInputWrapper
+  position: relative
+  width: 97%
+  height: 70%
+  margin: 12px 5px
+  --accent-color: #43E029
+  display: flex
+
+
+.textInputWrapper:before
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+  border-bottom: 1px solid #03CDDE
+
+
+.textInputWrapper:before,
+.textInputWrapper:after
+  content: ""
+  left: 0
+  right: 0
+  position: absolute
+  pointer-events: none
+  bottom: -1px
+  z-index: 4
+  width: 100%
+
+
+.textInputWrapper:focus-within:before
+  border-bottom: 1px solid var(--accent-color)
+
+
+.textInputWrapper:before
+  transition: border-bottom-color 1000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+  border-bottom: 1px solid #0A949F
+
+
+.textInputWrapper:focus-within:before
+  border-bottom: 1px solid var(--accent-color)
+  transform: scaleX(1)
+
+
+.textInputWrapper:focus-within:after
+  border-bottom: 4px solid var(--accent-color)
+  transform: scaleX(1)
+
+
+.textInputWrapper:after
+  content: ""
+  transform: scaleX(0)
+  transition: transform 1000ms cubic-bezier(0, 0, 0.2, 1) 0ms
+  will-change: transform
+  border-bottom: 4px solid var(--accent-color)
+  border-bottom-color: var(--accent-color)
+
+
+.textInput::placeholder
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms
+  opacity: 1
+  user-select: none
+  color: #F2F2F2
+
+
+.textInputWrapper .textInput
+  border-radius: 15px 0 0 0
+  box-shadow: 0px 2px 5px #03CDDE
+  height: 100%
+  background-color: #03CDDE
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1)
+  transition-duration: 200ms
+  transition-property: background-color
+  color: #F2F2F2
+  font-size: 20px
+  padding-left: 12px
+  width: 85%
+  border-left: none
+  border-bottom: none
+  border-right: none
+  border-top: none
+
+
+.textInputWrapper .box
+  border-radius: 0 15px 0 0
+  box-shadow: 0px 2px 5px #03CDDE
+  height: 100%
+  background-color: #03CDDE
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1)
+  transition-duration: 200ms
+  transition-property: background-color
+  color: #F2F2F2
+  font-size: 20px
+  padding-left: 12px
+  width: 15%
+  border-left: none
+  border-bottom: none
+  border-right: none
+  border-top: none
+  display: flex
+  align-items: center
+  justify-content: center
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active
+  outline: none
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active
+  background-color: #03CDDE
+
+.textInputWrapper:focus-within .textInput::placeholder
+  opacity: 0
+
+
+.btn-cssbuttons
+  --btn-color: #03CDDE
+  position: relative
+  padding: 16px 32px
+  font-family: Roboto, sans-serif
+  font-weight: 500
+  font-size: 20px
+  line-height: 1
+  color: #F2F2F2
+  background: none
+  width: 90%
+  height: 60%
+  border: none
+  outline: none
+  overflow: hidden
+  cursor: pointer
+  filter: drop-shadow(0 2px 8px #0A949F)
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+
+.btn-cssbuttons::before
+  position: absolute
+  content: ""
+  top: 0
+  left: 0
+  z-index: -1
+  width: 100%
+  height: 100%
+  background: var(--btn-color)
+  border-radius: 24px
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+
+.btn-cssbuttons span,
+.btn-cssbuttons span span
+  display: inline-flex
+  vertical-align: middle
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+
+.btn-cssbuttons span
+  transition-delay: 0.05s
+
+
+.btn-cssbuttons span:first-child
+  padding-right: 7px
+
+
+.btn-cssbuttons span span
+  margin-left: 8px
+  transition-delay: 0.1s
+
+
+.btn-cssbuttons ul
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+  display: flex
+  margin: 0
+  padding: 0
+  list-style-type: none
+  transform: translateY(-50%)
+
+
+.btn-cssbuttons ul li
+  flex: 1
+  font-size: 30px
+
+
+.btn-cssbuttons ul li i
+  display: inline-flex
+  vertical-align: middle
+  color: #96FFD9
+  transform: translateY(55px)
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+
+.btn-cssbuttons ul li i:hover
+  opacity: 0.5
+
+
+.btn-cssbuttons:hover::before
+  transform: scale(1.2)
+
+
+.btn-cssbuttons:hover span,
+.btn-cssbuttons:hover span span
+  transform: translateY(-55px)
+
+
+.btn-cssbuttons:hover ul li i
+  transform: translateY(0)
+
+
+.btn-cssbuttons:hover ul li:nth-child(1) i
+  transition-delay: 0.15s
+
+
+.btn-cssbuttons:hover ul li:nth-child(2) i
+  transition-delay: 0.2s
+
+
+.btn-cssbuttons:hover ul li:nth-child(3) i
+  transition-delay: 0.25s
+
+.icon_massage
+  width: 20px
+
+
+.button__send
+  font-family: inherit
+  font-size: 18px
+  background: #03CDDE
+  color: #F2F2F2
+  padding: 0.5em 1em
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+  border-radius: 25px
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+  transition: all 0.3s
+
+
+.button__send:hover
+  transform: translateY(-3px)
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3)
+  padding: 0em
+  background: #03CDDE
+  cursor: pointer
+
+
+.button__send:active
+  transform: scale(0.95)
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+
+.button__send span
+  display: block
+  margin-left: 0.4em
+  transition: all 0.3s
+
+
+.button__send:hover span
+  scale: 0
+  font-size: 0%
+  opacity: 0
+  transition: all 0.5s
+
+
+.button__send svg
+  width: 18px
+  height: 18px
+  fill: white
+  transition: all 0.3s
+
+
+.button__send .svg-wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background-color: rgba(255, 255, 255, 0)
+  transition: all 0.3s
+
+
+.button__send:hover .svg-wrapper
+  background-color: #03CDDE
+  width: 54px
+  height: 54px
+
+
+.button__send:hover svg
+  width: 25px
+  height: 25px
+  margin-right: 5px
+  transform: rotate(45deg)
+
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 50px
+  height: 50px
+  border-radius: 10px
+  font-size: 30px
+  border: none
+  background-color: transparent
+  position: relative
+
+
+.btn::after
+  content: 'Like'
+  width: fit-content
+  height: fit-content
+  position: absolute
+  font-size: 12px
+  color: white
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  opacity: 0
+  visibility: hidden
+  transition: .2s linear
+  top: 115%
+
+.btn_heart
+  width: 30px
+  height: 30px
+  transition: .2s linear
+  color: #96FFD9
+
+
+//.btn_heart path
+//  fill: #96FFD9
+//  transition: .2s linear
+
+
+.btn:hover .btn_heart
+  transform: scale(1.2)
+
+
+.btn:hover .btn_heart
+  color: red
+
+
+.btn:hover::after
+  visibility: visible
+  opacity: 1
+  top: 90%
+
+
+.inputGroup
+  font-family: 'Segoe UI', sans-serif
+  margin: 1em 0 1em 0
+  width: 465px
+  position: relative
+
+
+.inputGroup input
+  font-size: 100%
+  padding: 0.8em
+  outline: none
+  color: #F2F2F2
+  border: 2px solid #96FFD9
+  background-color: transparent
+  border-radius: 20px
+  width: 100%
+
+
+.inputGroup label
+  font-size: 100%
+  position: absolute
+  left: 0
+  padding: 0.8em
+  margin-left: 0.5em
+  pointer-events: none
+  transition: all 0.3s ease
+  color: #F2F2F2
+
+
+.inputGroup :is(input:focus, input:valid) ~ label
+  transform: translateY(-50%) scale(.9)
+  margin: 0em
+  margin-left: 1.3em
+  padding: 0.4em
+  background-color: #100f0f
+
+
+.inputGroup :is(input:focus, input:valid)
+  border-color: #03CDDE
+
+.inputGroup:active
+  color: #03CDDE
+
+
+#range[type=range]
+  -webkit-appearance: none
+  -webkit-transition: 0.2s
+  transition: opacity 0.2s
+  background: linear-gradient(90deg, rgb(215, 214, 214) 60%, rgb(215, 214, 214) 60%)
+  width: 80px
+  outline: none
+  height: 3px
+  margin-right: 10px
+  margin-left: 10px
+
+
+#range[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+  appearance: none
+  height: 15px
+  width: 15px
+  background: #96FFD9
+  border-radius: 100%
+  cursor: pointer
+
+
+#range[type=range]::-moz-range-thumb
+  height: 15px
+  width: 15px
+  background: #96FFD9
+  border-radius: 100%
+  cursor: pointer
+
+
+.button_x
+  width: 35px
+  height: 35px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: -1px
+  right: -1px
+  border-radius: 0 15px 0 5px
+  font-size: 20px
+  color: #96FFD9
+
+  &:hover
+    background: red
+    color: #03CDDE
+
+  &:active
+    width: 33px
+    height: 33px
+    background: red
+    color: #03CDDE

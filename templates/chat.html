@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-Chat</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/static/sass/chat.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <div class="header_button v-chat_icon">
+            <h1>V-Chat</h1>
+        </div>
+        <div class="header_button massage_icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+        <div class="header_button profile_icon">
+            <i class="fa-solid fa-address-card"></i>
+        </div>
+        <div class="header_button favorite_icon">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="header_button video_icon">
+            <i class="fas fa-video"></i>
+        </div>
+    </div>
+    <div class="header_sections v-chat__section"></div>
+    <div class="header_sections video__section">
+        <div class="creat__video">
+            <div class="creat__video__text">
+                <h2>All my videos: 23</h2>
+            </div>
+            <div class="creat__video__icon icon_active">
+                <i class="fa-solid fa-file-video"></i>
+            </div>
+        </div>
+        <div class="creat__photo">
+            <div class="creat__photo__text">
+                <h2> All my photos: 23</h2>
+            </div>
+            <div class="creat__photo__icon icon_active">
+                <i class="fa-solid fa-file-image"></i>
+            </div>
+        </div>
+        <div class="creat__music">
+            <div class="creat__music__text">
+                <h2>All my musics: 23</h2>
+            </div>
+            <div class="creat__music__icon icon_active">
+                <i class="fa-solid fa-file-audio"></i>
+            </div>
+        </div>
+        <div class="creat__product">
+            <div class="creat__product__text">
+                <h2>All my products: 23</h2>
+            </div>
+            <div class="creat__product__icon icon_active">
+                <i class="fa-solid fa-file-medical"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header_sections massage__section">
+        {% for user in user_all %}
+            <div class="user" data-username="{{ user.username }}">
+                <div class="user_img">
+                    <img src="{{ user.img }}" alt="">
+                </div>
+                <div class="user_box">
+                    <div class="user_box_username">
+                        <h2>{{ user.username }}</h2>
+                    </div>
+                    <div class="user_box_name">
+                        <h3>{{ user.name }}</h3>
+                    </div>
+                </div>
+                <div class="user_img_score">
+                    <div class="user_img_score_icon">
+                        <div class="rating">
+                            <input value="5" name="rating" type="radio">
+                            <label for="star5"></label>
+                            <input value="4" name="rating" type="radio">
+                            <label for="star4"></label>
+                            <input value="3" name="rating" type="radio">
+                            <label for="star3"></label>
+                            <input value="2" name="rating" type="radio">
+                            <label for="star2"></label>
+                            <input value="1" name="rating" type="radio">
+                            <label for="star1"></label>
+                        </div>
+                    </div>
+                    <p>5.0</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {#    <div class="header_sections like__section">#}
+    {#        {% for user in user_all %}#}
+    {#            <div class="user">#}
+    {#                <div class="user_img">#}
+    {#                    <img src="{{ user.img }}" alt="">#}
+    {#                </div>#}
+    {#                <div class="user_box">#}
+    {#                    <div class="user_box_username">#}
+    {#                        <h2>{{ user.username }}</h2>#}
+    {#                    </div>#}
+    {#                    <div class="user_box_name">#}
+    {#                        <h3>{{ user.name }}</h3>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#                <div class="user_img_score">#}
+    {#                    <div class="user_img_score_icon">#}
+    {#                        <div class="rating">#}
+    {#                            <input value="5" name="rating" type="radio">#}
+    {#                            <label for="star5"></label>#}
+    {#                            <input value="4" name="rating" type="radio">#}
+    {#                            <label for="star4"></label>#}
+    {#                            <input value="3" name="rating" type="radio">#}
+    {#                            <label for="star3"></label>#}
+    {#                            <input value="2" name="rating" type="radio">#}
+    {#                            <label for="star2"></label>#}
+    {#                            <input value="1" name="rating" type="radio">#}
+    {#                            <label for="star1"></label>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                    <p>5.0</p>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        {% endfor %}#}
+    {#    </div>#}
+    <div class="video__active active_section">
+        <div class="button_x">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="video__active__text">
+            <h1>Add new video</h1>
+        </div>
+        <div class="video__active__input">
+            <div class="containerInput">
+                <input class=" input_video_add" placeholder="Type for validate" type="text">
+            </div>
+        </div>
+        <div class="video__active__box">
+            <div class="video__active__box__button" id="video-container">
+                <button class="button__video" id="video-button"> Select video
+                </button>
+                <input hidden type="file" id="video-input" class="video_input"
+                       accept="video/*">
+                <button class="button__video button_video_add"> Add video
+                </button>
+            </div>
+            <div class="video__active__box__img" id="video-div">
+
+            </div>
+        </div>
+    </div>
+    <div class="photo__active active_section">
+        <div class="button_x">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="photo__active__text">
+            <h1>Add new photo</h1>
+        </div>
+        <div class="photo__active__input">
+            <div class="containerInput">
+                <input class="input_photo_add" placeholder="Type for validate" type="text">
+            </div>
+        </div>
+        <div class="photo__active__box">
+            <div class="photo__active__box__button">
+                <button class="button__video" id="photo-button"> Select photo
+                </button>
+                <input hidden type="file" id="photo-input" class="photo_input"
+                       accept="image/*">
+                <button class="button__video button_photo_add"> Add photo
+                </button>
+            </div>
+            <div class="photo__active__box__img">
+                <img src="../static/register/img/photo_2023-07-17_19-20-08.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    {#    <div class="music__active video__active active_section">#}
+    {#        <div class="video__active__text">#}
+    {#            <h1>Add new music</h1>#}
+    {#        </div>#}
+    {#        <div class="video__active__input">#}
+    {#            <div class="containerInput">#}
+    {#                <input placeholder="Type for validate" type="text">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="video__active__box">#}
+    {#            <div class="video__active__box__button">#}
+    {#                <button class="button__video"> Select video#}
+    {#                </button>#}
+    {#                <button class="button__video"> Add video#}
+    {#                </button>#}
+    {#            </div>#}
+    {#            <div class="video__active__box__img">#}
+    {#                <img src="" alt="">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <div class="product__active video__active active_section">#}
+    {#        <div class="video__active__text">#}
+    {#            <h1>Add new product</h1>#}
+    {#        </div>#}
+    {#        <div class="video__active__input">#}
+    {#            <div class="containerInput">#}
+    {#                <input placeholder="Type for validate" type="text">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="video__active__box">#}
+    {#            <div class="video__active__box__button">#}
+    {#                <button class="button__video"> Select video#}
+    {#                </button>#}
+    {#                <button class="button__video"> Add video#}
+    {#                </button>#}
+    {#            </div>#}
+    {#            <div class="video__active__box__img">#}
+    {#                <img src="" alt="">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+</header>
+
+<section class="file_section section_all">
+    <div id="video-active" class="video">
+        <div class="video_header">
+            <div class="video_header_icon">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="video_header_icon_volume">
+                    <div class="video_header_icon_volume_line">
+                        <input type="range" min="0" max="100" value="100" id="range">
+                    </div>
+                    <div class="video_header_icon_volume_text">
+                        <p class="text"><span id="output">100</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <video width="649">
+            <source src="" type="video/mp4">
+        </video>
+        <div class="video_footer">
+            <div class="video_footer_box">
+                <div class="video_footer_box_icon">
+                    <i class="up_button fa-solid fa-arrow-up"></i>
+                    <i class="down_button fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="video_footer_box_comment">
+                    <div class="inputGroup">
+                        <input type="text" required="" autocomplete="off">
+                        <label for="name">Comment</label>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+                <div class="video_footer_box_heart">
+                    <button class="btn">
+                        <i class="fa-regular fa-heart btn_heart like_icon"></i>
+                        {#                        <i class="fa-solid fa-heart btn_heart like_icon"></i>#}
+                    </button>
+                </div>
+            </div>
+            <div class="video_footer_line">
+                <div class="video_footer_line_item"></div>
+            </div>
+        </div>
+    </div>
+    <div id="photo-active" class="photo">
+        <img src="../media/photo/photo_2022-12-25_13-23-49.jpg" alt="">
+        <div class="video_footer">
+            <div class="video_footer_box">
+                <div class="video_footer_box_icon">
+                    <i class="up_button fa-solid fa-arrow-up"></i>
+                    <i class="down_button fa-solid fa-arrow-down"></i>
+                </div>
+                <div class="video_footer_box_comment">
+                    <div class="inputGroup">
+                        <input type="text" required="" autocomplete="off">
+                        <label for="name">Comment</label>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </div>
+                <div class="video_footer_box_heart">
+                    <button class="btn">
+                        <i class="fa-regular fa-heart btn_heart like_icon"></i>
+                        {#                        <i class="fa-solid fa-heart btn_heart like_icon"></i>#}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comments">
+        <div class="comment_header">
+            <div class="comment_header_img">
+                <img src="../static/img/Group%2012.png" alt="">
+            </div>
+            <div class="comment_header_all">
+                <div class="comment_header_all_box">
+                    <div class="comment_header_user"><h1>User name</h1></div>
+                    <div class="comment_header_score">
+                        <div class="comment_header_score_icon">
+                            <div class="rating">
+                                <input value="5" name="rating" type="radio">
+                                <label for="star5"></label>
+                                <input value="4" name="rating" type="radio">
+                                <label for="star4"></label>
+                                <input value="3" name="rating" type="radio">
+                                <label for="star3"></label>
+                                <input value="2" name="rating" type="radio">
+                                <label for="star2"></label>
+                                <input value="1" name="rating" type="radio">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <div class="comment_header_score_text">5.0</div>
+                    </div>
+                </div>
+                <div class="comment_header_all_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae debitis dolores est,
+                        placeat quod.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="comment_section">
+            {#            <div class="comment">#}
+            {#                <div class="comment_header">#}
+            {#                    <div class="comment_header_img">#}
+            {#                        <img src="../static/img/Group%201.png" alt="">#}
+            {#                    </div>#}
+            {#                    <div class="comment_header_username"><h2>User name</h2></div>#}
+            {#                    <div class="comment_header_score">#}
+            {#                        <div class="rating">#}
+            {#                            <input value="5" name="rating" type="radio">#}
+            {#                            <label for="star5"></label>#}
+            {#                            <input value="4" name="rating" type="radio">#}
+            {#                            <label for="star4"></label>#}
+            {#                            <input value="3" name="rating" type="radio">#}
+            {#                            <label for="star3"></label>#}
+            {#                            <input value="2" name="rating" type="radio">#}
+            {#                            <label for="star2"></label>#}
+            {#                            <input value="1" name="rating" type="radio">#}
+            {#                            <label for="star1"></label>#}
+            {#                        </div>#}
+            {#                        <div class="comment_header_score_number">#}
+            {#                            <p>5.0</p>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#                <div class="comment_section">#}
+            {#                    <div class="comment_section_text">#}
+            {#                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur deleniti dolorum#}
+            {#                            ducimus error et ex exercitationem hic magni nisi nostrum, optio quidem quis quo tempora.#}
+            {#                            Impedit natus nostrum sunt!</p>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </div>
+</section>
+
+<section class="massage_section section_all">
+    <div class="box">
+        <header>
+            <div class="header_img">
+                <img id="user-img" src="../static/img/Group%2012fvgdgfg.png" alt="">
+            </div>
+            <div class="header_box">
+                <div class="header_box_name">
+                    <h1 id="user-username">MMR</h1>
+                </div>
+                <div class="header_box_full_name">
+                    <h3 id="user-name">Mukinboyev Mannopboy</h3>
+                </div>
+            </div>
+            <div class="header_score">
+                <div class="header_score_icon">
+                    <div class="rating">
+                        <input value="5" name="rating" type="radio">
+                        <label for="star5"></label>
+                        <input value="4" name="rating" type="radio">
+                        <label for="star4"></label>
+                        <input value="3" name="rating" type="radio">
+                        <label for="star3"></label>
+                        <input value="2" name="rating" type="radio">
+                        <label for="star2"></label>
+                        <input value="1" name="rating" type="radio">
+                        <label for="star1"></label>
+                    </div>
+                </div>
+                <p>5.0</p>
+            </div>
+        </header>
+        <section data-user="{{ user.username }}" id="massage">
+            {#            <div class="massage two">wefwefew</div>#}
+        </section>
+        <footer>
+            <div class="footer_input">
+                <div class="textInputWrapper">
+                    <input placeholder="Massage" data-chat="{{ chat_id }}" type="text" class="textInput">
+                    <div class="box">
+                        <button class="button__send">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                                              fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_box">
+                <button class="btn-cssbuttons">
+                    <span>Send file</span>
+                    <span>
+                      <svg height="18" width="18" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                           viewBox="0 0 1024 1024" class="icon">
+                        <path fill="#ffffff"
+                              d="M767.99994 585.142857q75.995429 0 129.462857 53.394286t53.394286 129.462857-53.394286 129.462857-129.462857 53.394286-129.462857-53.394286-53.394286-129.462857q0-6.875429 1.170286-19.456l-205.677714-102.838857q-52.589714 49.152-124.562286 49.152-75.995429 0-129.462857-53.394286t-53.394286-129.462857 53.394286-129.462857 129.462857-53.394286q71.972571 0 124.562286 49.152l205.677714-102.838857q-1.170286-12.580571-1.170286-19.456 0-75.995429 53.394286-129.462857t129.462857-53.394286 129.462857 53.394286 53.394286 129.462857-53.394286 129.462857-129.462857 53.394286q-71.972571 0-124.562286-49.152l-205.677714 102.838857q1.170286 12.580571 1.170286 19.456t-1.170286 19.456l205.677714 102.838857q52.589714-49.152 124.562286-49.152z"></path>
+                      </svg>
+                    </span>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-file-video"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file-image"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-file-audio"></i>
+                        </li>
+                    </ul>
+                </button>
+            </div>
+        </footer>
+    </div>
+</section>
+
+<section class="video_list_section section_all">
+    {% for video in video_all %}
+        <div class="video">
+            <video controls width="250">
+                <source src="{{ video.url }}" type="video/mp4">
+            </video>
+        </div>
+    {% endfor %}
+</section>
+
+<section class="photo_list_section section_all">
+    {% for photo in photo_all %}
+        <div class="photo">
+            <img src="{{ photo.url }}" alt="Img 404">
+        </div>
+    {% endfor %}
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"
+        integrity="sha512-tE1z+95+lMCGwy+9PnKgUSIeHhvioC9lMlI7rLWU0Ps3XTdjRygLcy4mLuL0JAoK4TLdQEyP0yOl/9dMOqpH/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../static/js/chat.js"></script>
+</body>
+</html>

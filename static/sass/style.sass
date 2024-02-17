@@ -1,0 +1,402 @@
+*, *::before, *::after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+
+.main__1
+  width: 100%
+  height: 80vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background: #F5FFF8
+
+  .box1
+    width: 100%
+    height: 20%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #100F0F
+    font-size: 48px
+
+  .box2
+    width: 100%
+    height: 80%
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    .box2__item
+      width: 350px
+      height: 420px
+      background: #EAFCEF
+      border: 2px solid #43E029
+      border-radius: 10px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+
+      .box2__item__icon
+        width: 100%
+        height: 40%
+        display: flex
+        align-items: center
+        justify-content: center
+
+      .box2__item__name
+        width: 100%
+        height: 10%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 14px
+
+      .box2__item__text
+        width: 100%
+        height: 30%
+        display: flex
+        align-items: center
+        justify-content: center
+
+      .box2__item__button
+        width: 100%
+        height: 20%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .btn
+          --color1: #43E029
+          --color2: #41ce29
+          perspective: 1000px
+          padding: 1em 1em
+          background: linear-gradient(var(--color1), var(--color2))
+          border: none
+          outline: none
+          font-size: 20px
+          text-transform: uppercase
+          letter-spacing: 4px
+          color: #fff
+          text-shadow: 0 10px 10px #000
+          cursor: pointer
+          transform: rotateX(70deg) rotateZ(30deg)
+          transform-style: preserve-3d
+          transition: transform 0.5s
+
+
+          &::before
+            content: ""
+            width: 100%
+            height: 15px
+            background-color: var(--color2)
+            position: absolute
+            bottom: 0
+            right: 0
+            transform: rotateX(90deg)
+            transform-origin: bottom
+
+
+          &::after
+            content: ""
+            width: 15px
+            height: 100%
+            background-color: var(--color1)
+            position: absolute
+            top: 0
+            right: 0
+            transform: rotateY(-90deg)
+            transform-origin: right
+
+
+          &:hover
+            transform: rotateX(30deg) rotateZ(0)
+
+
+.main__2
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #FFFFFF
+
+  .box1
+    width: 50%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+
+  .box2
+    width: 50%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+
+    .box2__name
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      font-size: 30px
+
+    .box2__text
+      width: 60%
+      height: 40%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      font-size: 20px
+
+    .box2__button
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+
+      .scene
+        width: 10em
+        justify-content: center
+        align-items: center
+
+
+        .cube
+          color: #ccc
+          cursor: pointer
+          font-family: 'Roboto', sans-serif
+          transition: all 0.85s cubic-bezier(.17, .67, .14, .93)
+          transform-style: preserve-3d
+          transform-origin: 100% 50%
+          width: 10em
+          height: 4em
+
+
+          &:hover
+            transform: rotateX(-90deg)
+
+
+          .side
+            box-sizing: border-box
+            position: absolute
+            display: inline-block
+            height: 4em
+            width: 10em
+            text-align: center
+            text-transform: uppercase
+            padding-top: 1.5em
+            font-weight: bold
+
+
+          .top
+            background: #96FFD9
+            color: black
+            transform: rotateX(90deg) translate3d(0, 0, 2em)
+            box-shadow: inset 0 0 0 5px #F5FFF8
+
+
+          .front
+            background: #FFD700
+            color: white
+            box-shadow: inset 0 0 0 5px #F5FFF8
+            transform: translate3d(0, 0, 2em)
+
+
+.main__3
+  height: 100vh
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #FFFFFF
+
+  .box1
+    width: 50%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+    padding-left: 50px
+
+    .box1__name
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      font-size: 30px
+
+    .box1__text
+      width: 60%
+      height: 40%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      font-size: 20px
+
+    .box1__button
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+
+      .scene
+        width: 10em
+        justify-content: center
+        align-items: center
+
+
+        .cube
+          color: #ccc
+          cursor: pointer
+          font-family: 'Roboto', sans-serif
+          transition: all 0.85s cubic-bezier(.17, .67, .14, .93)
+          transform-style: preserve-3d
+          transform-origin: 100% 50%
+          width: 10em
+          height: 4em
+
+
+          &:hover
+            transform: rotateX(-90deg)
+
+
+          .side
+            box-sizing: border-box
+            position: absolute
+            display: inline-block
+            height: 4em
+            width: 10em
+            text-align: center
+            text-transform: uppercase
+            padding-top: 1.5em
+            font-weight: bold
+
+
+          .top
+            background: #96FFD9
+            color: black
+            transform: rotateX(90deg) translate3d(0, 0, 2em)
+            box-shadow: inset 0 0 0 5px #F5FFF8
+
+
+          .front
+            background: #FFD700
+            color: white
+            box-shadow: inset 0 0 0 5px #F5FFF8
+            transform: translate3d(0, 0, 2em)
+
+  .box2
+    width: 50%
+    height: 100%
+    display: flex
+
+
+.main__5
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #FFFFFF
+
+  .box1
+    width: 50%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: flex-start
+    padding-left: 50px
+
+    .box1__name
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      font-size: 30px
+      z-index: 12
+
+    .box1__text
+      width: 60%
+      height: 40%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      font-size: 20px
+
+    .box1__button
+      width: 100%
+      height: 30%
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+
+      .scene
+        width: 10em
+        justify-content: center
+        align-items: center
+
+
+        .cube
+          color: #ccc
+          cursor: pointer
+          font-family: 'Roboto', sans-serif
+          transition: all 0.85s cubic-bezier(.17, .67, .14, .93)
+          transform-style: preserve-3d
+          transform-origin: 100% 50%
+          width: 10em
+          height: 4em
+
+
+          &:hover
+            transform: rotateX(-90deg)
+
+
+          .side
+            box-sizing: border-box
+            position: absolute
+            display: inline-block
+            height: 4em
+            width: 10em
+            text-align: center
+            text-transform: uppercase
+            padding-top: 1.5em
+            font-weight: bold
+
+
+          .top
+            background: #96FFD9
+            color: black
+            transform: rotateX(90deg) translate3d(0, 0, 2em)
+            box-shadow: inset 0 0 0 5px #F5FFF8
+
+
+          .front
+            background: #FFD700
+            color: white
+            box-shadow: inset 0 0 0 5px #F5FFF8
+            transform: translate3d(0, 0, 2em)
+
+  .box2
+    width: 50%
+    height: 100%
+    display: flex
+    position: relative
+
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+
+
